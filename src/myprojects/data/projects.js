@@ -99,7 +99,7 @@ const billmateProject = {
 
 const adminMeraDoctorProject = {
   "logoImage": "admin_mera_doctor_logo.ico",
-  "title": "Admin App",
+  "title": "Mera Doctor \n Admin App",
   "description": "The Admin App provides a web-based interface for administrators to manage users, appointments, and doctors.",
   "techStack": [
     {
@@ -133,7 +133,7 @@ const adminMeraDoctorProject = {
 
 const doctorMeraDoctorProject = {
   "logoImage": "doctor_app_logo.png",
-  "title": "Doctor App",
+  "title": "Mera Doctor \n Doctor App",
   "description": "The Doctor App is designed for doctors to manage their appointments and interact with patients.",
   "techStack": [
     {
@@ -180,7 +180,7 @@ const doctorMeraDoctorProject = {
 
 const patientMeraDoctorProject = {
   "logoImage": "patient_app_logo.png",
-  "title": "Patient App",
+  "title": "Mera Doctor \n Patient App",
   "description": "The Patient App enables users to schedule appointments with doctors, receive appointment reminders, and manage their medical records.",
   "techStack": [
     {
