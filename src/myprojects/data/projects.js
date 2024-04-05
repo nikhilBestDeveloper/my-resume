@@ -222,7 +222,7 @@ const patientMeraDoctorProject = {
     ]
   }
 };
-projects = [
+const projects = [
   billmateProject,
   adminMeraDoctorProject,
   doctorMeraDoctorProject,
