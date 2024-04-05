@@ -222,10 +222,12 @@ const patientMeraDoctorProject = {
     ]
   }
 };
-
-export default [
+projects = [
   billmateProject,
   adminMeraDoctorProject,
   doctorMeraDoctorProject,
   patientMeraDoctorProject
 ]
+
+
+export default projects
