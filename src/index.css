@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 
-.certification-icon-dark {
+.icon-dark {
   width: 24px;
   height: 24px;
   margin-right: 8px;
@@ -11,7 +11,7 @@
 }
 
 
-.certification-icon-light {
+.icon-light {
   width: 24px;
   height: 24px;
   margin-right: 8px;

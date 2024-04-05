@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import darkModeIcon from './assets/day-mode.png';
 import lightModeIcon from './assets/night-mode.png';
-import Home from './about/components/About';
+import About from './about/components/About';
 import MyProjects from './myprojects/components/MyProjects';
 
 // Define page constants
@@ -64,7 +64,7 @@ function App() {
           </ul>
         </nav>
       </div>
-      {activePage === PAGES.HOME && <Home darkMode={darkMode} />}
+      {activePage === PAGES.HOME && <About darkMode={darkMode} />}
       {activePage === PAGES.MYPROJECTS && <MyProjects darkMode={darkMode} />}
     </div>
   );
