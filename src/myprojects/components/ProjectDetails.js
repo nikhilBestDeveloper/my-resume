@@ -19,6 +19,12 @@ function ProjectDetails({ projectDetails, darkMode }) {
           </div>
         )}
         {/* Links Section */}
+        { timeline && 
+          <div className='text-lg'>
+timeline
+        </div>
+}
+        {/* Links Section */}
         <div>
           <h4 className={`text-xl font-bold mb-1 ${darkMode ? 'dark:text-white' : 'text-gray-800'}`}>Links:</h4>
           <ul className={`text-lg list-disc list-inside ${darkMode ? 'dark:text-gray-300' : 'text-gray-700'}`}>
