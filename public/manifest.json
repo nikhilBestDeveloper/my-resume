@@ -1,10 +1,10 @@
 {
   "manifest_version":3,
   "title": "Nikhil Ambuwani",
-  "description": "Resume of Nikhil Ambuwani",
+  "description": "Portfolio of Nikhil Ambuwani",
   "short_name": "Nikhil Ambuwani",
   "version": "1.0",
-  "name": "Nikhil Ambuwani Resume",
+  "name": "Nikhil Ambuwani Portfolio",
   "icons": [
     {
       "src": "favicon.ico",
