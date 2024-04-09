@@ -35,7 +35,7 @@ function App() {
   };
 
   return (
-    <div className={`min-h-screen min-w-screen flex flex-grow flex-col ${darkMode ? 'dark bg-gray-600' : 'white'} transition`}>
+    <div className={`min-h-screen min-w-screen flex flex-grow flex-col ${darkMode ? 'dark bg-gray-600' : 'white'} transition select-text`}>
       <div className="dark-mode-toggle absolute top-4 right-4 cursor-pointer" onClick={toggleDarkMode}>
         <img src={darkMode ? lightModeIcon : darkModeIcon} alt="Dark Mode Toggle" className="w-8 h-8" />
       </div>

@@ -207,7 +207,8 @@ const patientMeraDoctorProject = {
   ],
   "screenshotsFolder": {
     "name": "patient_app_snapshots",
-    "size": 0
+    "size": 13,
+    "extension": "jpg"
   },
   "timeline": {
     "start": "January 2024",
