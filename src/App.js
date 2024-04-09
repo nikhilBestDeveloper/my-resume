@@ -3,6 +3,7 @@ import darkModeIcon from './assets/day-mode.png';
 import lightModeIcon from './assets/night-mode.png';
 import About from './about/components/About';
 import MyProjects from './myprojects/components/MyProjects';
+import Links from './links/composable/Links';
 
 // Define page constants
 const PAGES = {
@@ -31,11 +32,12 @@ function App() {
   };
 
   const getUnderlineColor = (selected, darkMode) => {
-    return selected ? (getNavItemColor(selected,darkMode)) : 'bg-transparent';
+    return selected ? (getNavItemColor(selected, darkMode)) : 'bg-transparent';
   };
 
   return (
     <div className={`min-h-screen min-w-screen flex flex-grow flex-col ${darkMode ? 'dark bg-gray-600' : 'white'} transition select-text`}>
+      {/* <Links darkMode={darkMode}/> */}
       <div className="dark-mode-toggle absolute top-4 right-4 cursor-pointer" onClick={toggleDarkMode}>
         <img src={darkMode ? lightModeIcon : darkModeIcon} alt="Dark Mode Toggle" className="w-8 h-8" />
       </div>
@@ -57,7 +59,7 @@ function App() {
                 className={`nav-button relative ${getNavItemColor(activePage === PAGES.MYPROJECTS, darkMode)} hover:text-blue-700 hover:bg-transparent`}
                 onClick={() => handlePageChange(PAGES.MYPROJECTS)}
               >
-               My Projects
+                My Projects
                 <span className={`absolute bottom-0 left-0 w-full h-0.5 transition-transform transform translate-x-0 ${getUnderlineColor(activePage === PAGES.MYPROJECTS, darkMode)}`}></span>
               </button>
             </li>

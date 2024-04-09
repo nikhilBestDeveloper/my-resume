@@ -1,6 +1,15 @@
+import { logDOM } from '@testing-library/react';
 import React from 'react';
 
 function ProjectDetails({ projectDetails, darkMode }) {
+  const openInNewTab = (url) => {
+    console.log("X =" + url);
+    window.open(
+      require(url),
+      '_blank'
+    );
+  };
+  function getImageUrl(folder, file) { return `../assets/${folder}/${file}` }
   const { title, logoImage, description, links, techStack, screenshotsFolder, timeline, technicalChallenges, features } = projectDetails;
   console.log(screenshotsFolder)
   const screenshots = Array.from({ length: screenshotsFolder.size }, (_, i) => `${i + 1}.${screenshotsFolder.extension}`);
@@ -19,11 +28,12 @@ function ProjectDetails({ projectDetails, darkMode }) {
           </div>
         )}
         {/* Links Section */}
-        { timeline && 
-          <div className='text-lg'>
-timeline
-        </div>
-}
+        {timeline &&
+          <div>
+            <h4 className={`text-xl font-bold mb-1 ${darkMode ? 'dark:text-white' : 'text-gray-800'}`}>Timeline</h4>
+            <p className={`text-lg ${darkMode ? 'dark:text-gray-300' : 'text-gray-700'}`}>{`${timeline.start} - ${timeline.end}`}</p>
+          </div>
+        }
         {/* Links Section */}
         <div>
           <h4 className={`text-xl font-bold mb-1 ${darkMode ? 'dark:text-white' : 'text-gray-800'}`}>Links:</h4>
@@ -45,7 +55,7 @@ timeline
                 style={{ zIndex: 1 }}
                 onClick={() => {
                   const container = document.querySelector('.overflow-x-scroll');
-                  if (container) container.scrollLeft -= 100; // Adjust scroll amount as needed
+                  if (container) container.scrollLeft -= 150; // Adjust scroll amount as needed
                 }}
               >
                 &lt;
@@ -55,7 +65,8 @@ timeline
                   <img
                     src={require(`../assets/${projectDetails.screenshotsFolder.name}/${screenshot}`)}
                     alt={`Screenshot ${index + 1}`}
-                    className="max-w-md max-h-md"
+                    className="max-w-48 lg:max-w-96 cursor-pointer"
+                    onClick={() => openInNewTab(getImageUrl(projectDetails.screenshotsFolder.name, screenshot))}
                   />
                   <div className="absolute inset-0 bg-gray-300 opacity-20"></div>
                 </div>
@@ -65,7 +76,7 @@ timeline
                 style={{ zIndex: 1 }}
                 onClick={() => {
                   const container = document.querySelector('.overflow-x-scroll');
-                  if (container) container.scrollLeft += 100; // Adjust scroll amount as needed
+                  if (container) container.scrollLeft += 150; // Adjust scroll amount as needed
                 }}
               >
                 &gt;
@@ -74,8 +85,6 @@ timeline
           </div>
         </div>
       )}
-
-
 
       {/* Tech Stack Section */}
       {techStack && techStack.length > 0 && (
