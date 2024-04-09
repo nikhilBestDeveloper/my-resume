@@ -1,15 +1,8 @@
 import React from 'react';
 
 function ProjectDetails({ projectDetails, darkMode }) {
-  const openInNewTab = (url) => {
-    window.open(
-      require(url),
-      '_blank'
-    );
-  };
-  function getImageUrl(folder, file) { return `../assets/${folder}/${file}` }
+
   const { title, logoImage, description, links, techStack, screenshotsFolder, timeline, technicalChallenges, features } = projectDetails;
-  console.log(screenshotsFolder)
   const screenshots = Array.from({ length: screenshotsFolder.size }, (_, i) => `${i + 1}.${screenshotsFolder.extension}`);
   return (
     <div>
@@ -64,7 +57,6 @@ function ProjectDetails({ projectDetails, darkMode }) {
                     src={require(`../assets/${projectDetails.screenshotsFolder.name}/${screenshot}`)}
                     alt={`Screenshot ${index + 1}`}
                     className="max-w-48 lg:max-w-96 cursor-pointer"
-                    onClick={() => openInNewTab(getImageUrl(projectDetails.screenshotsFolder.name, screenshot))}
                   />
                   <div className="absolute inset-0 bg-gray-300 opacity-20"></div>
                 </div>
