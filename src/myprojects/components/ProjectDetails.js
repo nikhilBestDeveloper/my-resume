@@ -56,7 +56,7 @@ function ProjectDetails({ projectDetails, darkMode }) {
                   <img
                     src={require(`../assets/${projectDetails.screenshotsFolder.name}/${screenshot}`)}
                     alt={`Screenshot ${index + 1}`}
-                    className="max-w-48 lg:max-w-96 cursor-pointer"
+                    className={` ${projectDetails.screenshotsFolder.orientation === "landscape" ? "max-w-72":"max-w-48"} lg:max-w-96 cursor-pointer`}
                   />
                   <div className="absolute inset-0 bg-gray-300 opacity-20"></div>
                 </div>
