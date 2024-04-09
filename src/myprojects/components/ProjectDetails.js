@@ -1,9 +1,7 @@
-import { logDOM } from '@testing-library/react';
 import React from 'react';
 
 function ProjectDetails({ projectDetails, darkMode }) {
   const openInNewTab = (url) => {
-    console.log("X =" + url);
     window.open(
       require(url),
       '_blank'

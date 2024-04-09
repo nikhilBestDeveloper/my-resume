@@ -3,7 +3,6 @@ import darkModeIcon from './assets/day-mode.png';
 import lightModeIcon from './assets/night-mode.png';
 import About from './about/components/About';
 import MyProjects from './myprojects/components/MyProjects';
-import Links from './links/composable/Links';
 
 // Define page constants
 const PAGES = {
