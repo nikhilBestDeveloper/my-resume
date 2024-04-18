@@ -35,29 +35,29 @@ export default function App() {
     { title: 'Instagram', icon: 'instagram.png', url: "https://www.instagram.com/priya_nikhil2511/" },
     { title: 'Whatsapp', icon: 'whatsapp.png', url: "https://wa.me/918839286044" },
     { title: 'Fiverr', icon: 'fiverr.png', url: "https://www.fiverr.com/nikhilambuwani" },
-    { title: 'Fiverr Gig', icon: 'gig.png', url: "https://www.fiverr.com/s/j9oQrw" },  
+    { title: 'Fiverr Gig', icon: 'gig.png', url: "https://www.fiverr.com/s/j9oQrw" },
   ];
-const rolesString = roles.join(", ")
+  const rolesString = roles.join(", ")
   return (
-    <div className="flex flex-grow flex-col justify-center items-center">
+    <div className="flex flex-grow flex-col justify-center items-center w-max-screen">
       {/* Name typing animation */}
       <div className="w-max justify-center items-center">
-        <h1 className={`animate-typing overflow-hidden whitespace-nowrap pr-5 text-5xl font-bold mb-8 text-center`}>NIKHIL AMBUWANI</h1>
+        <h2 className={`animate-typing overflow-hidden whitespace-nowrap pr-5 text-4xl lg:text-5xl font-bold mb-4 text-center`}>NIKHIL AMBUWANI</h2>
+        <div className='text-xl lg:text-2xl font-semibold mb-4'>
         {nameAnimationComplete && currentRoleIndex < roles.length && (
-          <h1 className="animate-typingInfinite text-3xl whitespace-nowrap overflow-hidden mb-8 font-bold w-max">{roles[currentRoleIndex]}</h1>
+          <h1 className="animate-typingInfinite  whitespace-nowrap overflow-hidden font-bold w-max">{roles[currentRoleIndex]}</h1>
         )}
-        {currentRoleIndex === roles.length &&
-         <div className="w-full overflow-hidden whitespace-nowrap mb-8">
-         <div className="animate-scroll md:animate-none  text-xl font-semibold">
-           {rolesString}
-         </div>
-       </div>
-          
-        }
-      </div>
 
+        {currentRoleIndex === roles.length &&
+          <div className='justify-center items-center w-full'>
+            {roles.map((role) => <h2 className="w-full text-center whitespace-normal break-words">{role}</h2>)}
+          </div>
+          }
+        </div>
+      </div>
+      
       <div className="flex flex-wrap mb-8 mx-2">
-      {links.map((link, index) => (
+        {links.map((link, index) => (
           <a key={index} href={link.url} className="inline-block px-4 py-2 mx-2 my-1 bg-slate-800 text-white rounded-lg transition-colors duration-300 hover:bg-gray-700">
             {link.icon && <img src={require(`../assets/${link.icon}`)} alt={link.title} className={`w-6 h-6 inline-block mr-2 ${link.bg}`} />}
             {link.title}
