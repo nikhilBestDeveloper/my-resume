@@ -52,6 +52,7 @@ function App() {
         <img src="/logo.png" alt="" className={`ms-4 mt-4 mr-4 cursor-pointer size-16 `} onClick={() => handlePageChange(PAGES.HOME)}></img>
         <nav className="justify-center items-center">
           <ul className="justify-center items-center flex space-x-4 text-2xl h-20 mr-10">
+
             <li>
               <button
                 className={`nav-button relative ${getNavItemColor(activePage === PAGES.ABOUT, darkMode)} hover:text-blue-700 hover:bg-transparent`}
@@ -75,7 +76,7 @@ function App() {
         <span className="mx-2">|</span>
         <span className={`mx-2 ${darkMode ? 'hover:text-blue-700' : 'hover:text-blue-500'}`} onClick={() => handlePageChange(PAGES.MYPROJECTS)}>My Projects</span>
         <span className="mx-2">|</span>
-        <button onClick={handleDownloadResume} className={`hover:text-blue-500 focus:outline-none ${darkMode ? 'hover:bg-transparent' : 'hover:bg-gray-200'}`}>Download Resume</button>
+        <button onClick={handleDownloadResume} className={`px-2 hover:text-blue-500 focus:outline-none ${darkMode ? 'hover:bg-transparent' : 'hover:bg-gray-200'}`}>Download Resume</button>
       </div>
 
     </div>
