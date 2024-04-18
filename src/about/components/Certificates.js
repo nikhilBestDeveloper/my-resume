@@ -3,7 +3,7 @@ import customBulletIcon from '../assets/certificate.png';
 
 const Certifications = ({ darkMode }) => {
   return (
-    <div className='w-full lg:w-1/3 h-full'>
+    <div className='w-max lg:w-1/3 h-full '>
         <h2 className="text-3xl font-bold mb-4">Certifications</h2>
         <ul className={ `list-disc text-xl text-gray-700 ${darkMode ? 'dark:text-gray-300' : ''}`}>
           <li className="mb-4 relative flex items-center">

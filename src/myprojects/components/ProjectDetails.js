@@ -67,10 +67,7 @@ function ProjectDetails({ projectDetails, darkMode }) {
                 onClick={() => {
                   const container = document.querySelector('.overflow-x-scroll');
                   if (container) container.scrollLeft += 150; // Adjust scroll amount as needed
-                }}
-              >
-                &gt;
-              </button>
+                }}>&gt;</button>
             </div>
           </div>
         </div>
@@ -95,7 +92,7 @@ function ProjectDetails({ projectDetails, darkMode }) {
       {features && (
         <div className={`flex flex-col ${darkMode ? 'dark bg-gray-800 text-white' : 'bg-gray-100 text-gray-700'}  rounded p-4 m-2`}>
           <h4 className={`text-xl font-bold mb-2 ${darkMode ? 'dark:text-white' : 'text-gray-800'}`}>Features:</h4>
-          <div className={`grid grid-cols-2 gap-4 ${darkMode ? 'dark:text-gray-300' : 'text-gray-700'}`}>
+          <div className={`grid grid-cols-1 lg:grid-cols-2 gap-4 ${darkMode ? 'dark:text-gray-300' : 'text-gray-700'}`}>
             {Object.entries(features).map(([label, featureList], index) => (
               <div key={index}>
                 <h5 className="text-xl font-semibold mb-1">{label}:</h5>
