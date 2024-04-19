@@ -36,7 +36,9 @@ export default function App() {
     { title: 'Whatsapp', icon: 'whatsapp.png', url: "https://wa.me/918839286044" },
     { title: 'Fiverr', icon: 'fiverr.png', url: "https://www.fiverr.com/nikhilambuwani" },
     { title: 'Fiverr Gig', icon: 'gig.png', url: "https://www.fiverr.com/s/j9oQrw" },
+    { title: 'Gmail', icon: 'gmail.png', url: "https://www.fiverr.com/s/j9oQrw" },
   ];
+
   const rolesString = roles.join(", ")
   return (
     <div className="flex flex-grow flex-col justify-center items-center w-max-screen">
