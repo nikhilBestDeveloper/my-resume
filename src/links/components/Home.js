@@ -40,7 +40,7 @@ export default function App() {
     { title: 'Call', icon: 'call.png', url: `tel:+8839286044` }
   ];
 
-  const rolesString = roles.join(", ")
+
   return (
     <div className="flex flex-grow flex-col justify-center items-center w-max-screen">
       {/* Name typing animation */}
