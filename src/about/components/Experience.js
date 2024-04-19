@@ -3,7 +3,7 @@ import React from 'react';
 const Experience = ({ darkMode }) => {
   return (
     <div className={`w-full`}>
-    <div className={`${darkMode ? 'dark dark:text-white bg-gray-800' : 'bg-gray-100 text-gray-700'} rounded-lg overflow-hidden shadow-md p-6 m-4`}>
+    <div className={`${darkMode ? 'text-white bg-gray-800' : 'bg-gray-100 text-gray-700'} rounded-lg overflow-hidden shadow-md p-6 m-4`}>
       <h2 className={`text-3xl font-bold mb-4 ${darkMode ? '' : ''}`}>Experience</h2>
 
       <div className="mb-6">

@@ -10,7 +10,7 @@ export default function Home({ darkMode }) {
   return (
     <div>
       <PersonalInfo darkMode={darkMode} />
-      <div className={`flex flex-wrap lg:space-y-2 justify-between max-w-screen  ${darkMode ? 'dark dark:text-white bg-gray-800' : 'bg-gray-100 text-gray-700'} rounded-lg overflow-hidden p-6 m-4`}>
+      <div className={`flex flex-wrap lg:space-y-2 justify-between max-w-screen  ${darkMode ? 'text-white bg-gray-800' : 'bg-gray-100 text-gray-700'} rounded-lg overflow-hidden p-6 m-4`}>
         <SkillsList darkMode={darkMode} />
         <Expertise darkMode={darkMode} />
         <Certifications darkMode={darkMode} />

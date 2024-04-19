@@ -2,9 +2,9 @@ import React from 'react';
 
 const SkillsList = ({ darkMode }) => {
   return (
-    <div className='w-full lg:w-1/3'>
-        <h2 className={`text-3xl font-bold mb-4 ${darkMode ? 'dark:text-white' : ''}`}>Skills</h2>
-        <ul className={ `list-disc text-xl text-gray-700 px-8 ${darkMode ? 'dark:text-gray-300' : ''}`}>
+    <div className={`w-full lg:w-1/3 ${darkMode ? 'text-white' : 'text-gray-700'} `}>
+        <h2 className={`text-3xl font-bold mb-4 `}>Skills</h2>
+        <ul className={ `list-disc text-xl px-8 `}>
           <li>Jetpack Compose</li>
           <li>Kotlin/JAVA</li>
           <li>Retrofit</li>
