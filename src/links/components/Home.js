@@ -36,7 +36,8 @@ export default function App() {
     { title: 'Whatsapp', icon: 'whatsapp.png', url: "https://wa.me/918839286044" },
     { title: 'Fiverr', icon: 'fiverr.png', url: "https://www.fiverr.com/nikhilambuwani" },
     { title: 'Fiverr Gig', icon: 'gig.png', url: "https://www.fiverr.com/s/j9oQrw" },
-    { title: 'Gmail', icon: 'gmail.png', url: "https://www.fiverr.com/s/j9oQrw" },
+    { title: 'Gmail', icon: 'gmail.png', url: "https://mail.google.com/mail/?view=cm&fs=1&to=nikhilambuwani21@gmail.com" },
+    { title: 'Call', icon: 'call.png', url: `tel:+8839286044` }
   ];
 
   const rolesString = roles.join(", ")
@@ -58,9 +59,9 @@ export default function App() {
         </div>
       </div>
       
-      <div className="flex flex-wrap mb-8 mx-2">
+      <div className="flex flex-wrap mb-8 mx-2 items-center justify-center">
         {links.map((link, index) => (
-          <a key={index} href={link.url} className="inline-block px-4 py-2 mx-2 my-1 bg-slate-800 text-white rounded-lg transition-colors duration-300 hover:bg-gray-700">
+          <a key={index} href={link.url} className="inline-block px-4 py-2 mx-2 my-1 bg-slate-800 text-white rounded-lg transition-colors duration-300 hover:bg-gray-700  items-center justify-center">
             {link.icon && <img src={require(`../assets/${link.icon}`)} alt={link.title} className={`w-6 h-6 inline-block mr-2 ${link.bg}`} />}
             {link.title}
           </a>

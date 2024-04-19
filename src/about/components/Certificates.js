@@ -3,9 +3,9 @@ import customBulletIcon from '../assets/certificate.png';
 
 const Certifications = ({ darkMode }) => {
   return (
-    <div className='w-max lg:w-1/3 h-full '>
+    <div className={`w-max lg:w-1/3 h-full ${darkMode ? 'text-white' : 'text-gray-700'} `}>
         <h2 className="text-3xl font-bold mb-4">Certifications</h2>
-        <ul className={ `list-disc text-xl text-gray-700 ${darkMode ? 'dark:text-gray-300' : ''}`}>
+        <ul className={ `list-disc text-xl`}>
           <li className="mb-4 relative flex items-center">
             <img src={customBulletIcon} alt="Custom Bullet" className={darkMode?"icon-dark":"icon-light"} />
             <span>Advance Web Development - Verbatim Technologies 2016.<br/> 
